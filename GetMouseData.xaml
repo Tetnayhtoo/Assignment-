@@ -1,0 +1,159 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetMouseData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Pnum" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>654,887</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetMouseData" sap:VirtualizedContainerService.HintSize="518,822" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="476,730" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="434,638" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="a30bab65-1dfe-41dd-9ca7-f421c9781e7e" Version="V1">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,422" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Name="Edt" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Product Name'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Prices'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" InteractionMode="Simulate" LimitExtractionTo="Rows" Version="V1">
+                <uix:NExtractData.DataTable>
+                  <InOutArgument x:TypeArguments="sd:DataTable">
+                    <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Edt</mca:CSharpReference>
+                  </InOutArgument>
+                </uix:NExtractData.DataTable>
+                <uix:NExtractData.MaximumResults>
+                  <InArgument x:TypeArguments="x:Int32">
+                    <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">Pnum</mca:CSharpValue>
+                  </InArgument>
+                </uix:NExtractData.MaximumResults>
+                <uix:NExtractData.NextLink>
+                  <uix:TargetAnchorable BrowserURL="https://www.shop.com.mm/catalog/?q=mouse&amp;_keyori=ss&amp;from=input&amp;spm=a2a0e.home.search.go.672a7fe458Mmpj" DesignTimeRectangle="1255, 559, 28, 28" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;a' idx='9' isleaf='1' parentid='root' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' isleaf='1' parentid='root' tag='A' /&gt;" Guid="6bedbdde-ecc7-474c-9e40-4d2d27289df1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADKSURBVFhH7ZehCgJBEIZ9TZMY7hkuXTIpPoDB7hpkkybTJpNZDMslg7BwsPXgl5G9wyC4nnOuwnywYWbD/zFMmQES8zsC1lporaGU6vVRBmU1tAL04ZwLVX9QBmU1tAJk9y0es0RABETgXwU8zGKJYxXKN+GZwNVgNs6xPvnQiIdHgKhLbIsMxa4MjTj4BO54HOZDZJtLqF/DKOBxXuUYTQ1cHVoR8Ah0HD/BIOCxn3RbQIJnAh8gAiIgAiLwVCD5YZL8NEtFYgHgBjKXdbuY+l8DAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fwww.shop.com.mm%2F%23&amp;amp;refer_pv_id=672a7fe458Mmpj' title='mouse - Buy mouse at Best Price in Myanmar | www.shop.com.mm' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1218, 559, 28, 28" ElementType="ListItem" FriendlyName="'23'" FullSelectorArgument="&lt;webctrl idx='8' parentid='root' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='root' tag='LI' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVFhH7ZfdDYMgFEY7mvOUYcoYPmiYw2g6hq7g260ff1EUDVaKTTgJD0LCd7xcjT4oMfcS6LqOqqqisiyjDeyPHIMVwGTTNDSOo56JA/ZHjpGwAjCLHW5ADvKAFUB5fonJywJZ4H8E+ppRURR28FYvSN7EZ2us7vW8nzCBlk8b8ylGI68ZiQEXPYnnLHQQxFaCa4IrsETd8XaII+QhnoCsgKmOn68EVD/MjkSi7lz2wWu5ssV5AXn+e2esRQ4kzgkchmvcpt0gXGDR+fvII3qKqRZ+wgR2Hy2361WDXvoUuC8hM9xQuxa1CS8iC2SB+wkk/yxP/mMCMAkzlCfWwP4mHCwEUpBYgOgD0cwlcwPjo0kAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NExtractData.NextLink>
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="283, 88, 1000, 4599" FriendlyName="'899 items'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;" Guid="a47cb08a-d55a-4166-a87e-ea7185a7eb35" InformativeScreenshot="166f9197adce26f032ba53a4471fdcd9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fwww.shop.com.mm%2F%23&amp;amp;refer_pv_id=672a7fe458Mmpj' title='mouse - Buy mouse at Best Price in Myanmar | www.shop.com.mm' /&gt;" SearchSteps="Selector" />
+                </uix:NExtractData.Target>
+              </uix:NExtractData>
+              <ui:BulkAddQueueItems TimeoutMS="{x:Null}" DisplayName="Bulk Add Queue Items" FolderPath="shinigamikoko112000@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_1" QueueName="MouseData">
+                <ui:BulkAddQueueItems.QueueItemsDataTable>
+                  <InArgument x:TypeArguments="sd:DataTable">
+                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">Edt</mca:CSharpValue>
+                  </InArgument>
+                </ui:BulkAddQueueItems.QueueItemsDataTable>
+              </ui:BulkAddQueueItems>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="4f79cd78414f74f9a45cff7f1ae6b4a4.png" Selector="&lt;html app='chrome.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fwww.shop.com.mm%2F%23&amp;amp;refer_pv_id=672a7fe458Mmpj' title='mouse - Buy mouse at Best Price in Myanmar | www.shop.com.mm'/&gt;" Url="https://www.shop.com.mm/catalog/?q=mouse&amp;_keyori=ss&amp;from=input&amp;spm=a2a0e.home.search.go.672a7fe458Mmpj" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
