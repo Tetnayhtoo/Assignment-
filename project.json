@@ -17,7 +17,7 @@
     "autoDispose": false,
     "isPausable": true,
     "isAttended": false,
-    "requiresUserInteraction": true,
+    "requiresUserInteraction": false,
     "supportsPersistence": false,
     "excludedLoggedData": [
       "Private:*",
